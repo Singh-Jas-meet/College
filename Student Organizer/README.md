@@ -3,6 +3,7 @@ This project allows the user to register a student to a tableview on the GUI wit
 * ID
 * Major
 * Name 
+
 A student can also be removed from the tableview, but not modified.
 
 ## Languages/Frameworks
