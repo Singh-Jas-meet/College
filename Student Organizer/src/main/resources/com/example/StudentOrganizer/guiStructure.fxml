@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f3ffcf;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StudentOrganizer.StudentController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.66668701171875" minWidth="10.0" prefWidth="160.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="574.0" minWidth="10.0" prefWidth="440.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="93.33334350585938" minHeight="10.0" prefHeight="93.33334350585938" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text fill="#eb9c4d" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management System" underline="true" wrappingWidth="439.80859375" GridPane.columnIndex="1">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Text>
+      <Text fill="#697060" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:" wrappingWidth="90.25048828125" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fill="#697060" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name:" wrappingWidth="120.5205078125" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fill="#697060" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Major:" wrappingWidth="120.13251495361328" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+      </Text>
+      <TextField fx:id="studentId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="studentName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="studentMajor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TableView fx:id="studentCollection" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="370.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <columns>
+          <TableColumn fx:id="firstCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="secondCol" prefWidth="143.3332977294922" text="Name" />
+            <TableColumn fx:id="thirdCol" minWidth="7.3333740234375" prefWidth="168.66665649414062" text="Major" />
+        </columns>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </TableView>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="addStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#joinStudent" prefHeight="25.0" prefWidth="60.0" text="Add" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="removeStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeStudent" prefHeight="25.0" prefWidth="60.0" text="Delete" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
